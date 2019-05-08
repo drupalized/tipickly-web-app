@@ -8,9 +8,16 @@
   }
 
   &__search {
-    input,
-    button {
+    input {
+      opacity: .4;
       border-color: #272727;
+      transition: all .15s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 1;
+      }
     }
   }
 

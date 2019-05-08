@@ -6,7 +6,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
 
 // URL paths.
 import { HOME, LOGIN } from '../../config/paths';
@@ -28,8 +27,7 @@ class Header extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse>
             <Form inline className="w-100 ml-auto px-5 App-header__search">
-              <FormControl type="text" placeholder="search for website..." className="w-75 rounded-0 border-0" size="lg" />
-              <Button variant="outline-light" className="w-25 border-secondary rounded-0" size="lg">search</Button>
+              <FormControl type="text" placeholder="search for a site and press enter..." className="w-100 border-0" size="lg" />
             </Form>
             <Nav className="ml-auto">
               <NavDropdown

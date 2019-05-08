@@ -3,39 +3,28 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import CardDeck from 'react-bootstrap/CardDeck';
+import { FaFolderPlus, FaGlobe, FaRegClone } from 'react-icons/fa';
 
 // Custom components.
-import LargeCard from '../../components/blocks/LargeCard';
+import SitesList from '../../components/lists/SitesList';
+import DomainsList from '../../components/lists/DomainsList';
 
 // Styles.
 import '../../styles/pages/home/Home.scss';
 
 class Home extends Component {
   render() {
-    const numbers = [1, 2, 3];
-
     return (
       <div className="Home">
-        <Tabs defaultActiveKey="sites" className="justify-content-center">
+        <Tabs defaultActiveKey="sites" className="justify-content-center mb-5">
           <Tab eventKey="sites" title="Sites">
-            <Button className="mt-5 p-3 text-uppercase" variant="warning">Create a new site +</Button>
-            <CardDeck className="Large-card mt-5">
-              { numbers.map((number, index) => {
-                return (
-                  <LargeCard
-                    key={ number }
-                    cardImage="http://fpoimg.com/600x400"
-                    cardTitle="Site Title 1"
-                    cardText="Some quick example text to build on the card title and make up the bulk of the card's content."
-                    cardTeaserText="http://site-url-dev-tipickly.domain.com"
-                  />
-                )
-              })}
-            </CardDeck>
+            <Button className="p-3 text-uppercase" variant="warning">Create a new site <FaFolderPlus /></Button>
+            <SitesList />
           </Tab>
           <Tab eventKey="domains" title="Domains">
-            Test 1
+            <Button className="p-3 mr-3 text-uppercase" variant="warning">Register a new domain <FaGlobe /></Button>
+            <Button className="p-3 text-uppercase" variant="warning">Transfer an existing domain <FaRegClone /></Button>
+            <DomainsList />
           </Tab>
         </Tabs>
       </div>
