@@ -13,6 +13,7 @@ import { Provider } from 'react-redux';
 import reducer from './reducers';
 
 // Styles.
+import 'bootstrap/dist/css/bootstrap.css';
 import './styles/index.scss';
 
 const store = createStore(reducer);

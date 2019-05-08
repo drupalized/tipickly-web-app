@@ -1,0 +1,10 @@
+.Large-card {
+  .card {
+    transition: all .15s;
+
+    &:hover {
+      margin-top: -2rem;
+      cursor: pointer;
+    }
+  }
+}

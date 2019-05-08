@@ -1,0 +1,11 @@
+@import '../../palette.scss';
+
+.App-footer {
+  background-color: $dark-gray;
+  color: $light-gray;
+
+  &__logo {
+    width: auto;
+    height: 3rem;
+  }
+}

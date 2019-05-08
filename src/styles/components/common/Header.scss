@@ -1,0 +1,24 @@
+.App-header {
+  &__logo,
+  &__profile {
+    img {
+      width: auto;
+      height: 3rem;
+    }
+  }
+
+  &__search {
+    input,
+    button {
+      border-color: #272727;
+    }
+  }
+
+  &__profile {
+    a {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
