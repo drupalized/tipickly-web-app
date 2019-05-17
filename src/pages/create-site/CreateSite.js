@@ -8,7 +8,7 @@ class CreateSite extends Component {
   render() {
     return (
       <div className="Create-site">
-
+        Create Site
       </div>
     );
   }

@@ -1,6 +1,9 @@
 @import '../../palette.scss';
 
 .App-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   background-color: $dark-gray;
   color: $light-gray;
 

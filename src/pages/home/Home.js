@@ -18,7 +18,9 @@ class Home extends Component {
       <div className="Home">
         <Tabs defaultActiveKey="sites" className="justify-content-center mb-5">
           <Tab eventKey="sites" title="Sites">
-            <Button className="p-3 text-uppercase" variant="warning">Create a new site <FaFolderPlus /></Button>
+            <Button className="p-3 text-uppercase" variant="warning" href="/create-site">
+              Create a new site <FaFolderPlus />
+            </Button>
             <SitesList />
           </Tab>
           <Tab eventKey="domains" title="Domains">

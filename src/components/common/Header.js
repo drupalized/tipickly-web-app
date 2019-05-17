@@ -1,14 +1,15 @@
 // Global components.
 import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 
+// Custom components.
+import MainMenu from '../menus/MainMenu';
+
 // URL paths.
-import { HOME, LOGIN } from '../../config/paths';
+import { HOME } from '../../config/paths';
 
 // Assets.
 import logo from '../../assets/logo.svg';
@@ -29,24 +30,7 @@ class Header extends Component {
             <Form inline className="w-100 ml-auto px-5 App-header__search">
               <FormControl type="text" placeholder="search for a site and press enter..." className="w-100 border-0" size="lg" />
             </Form>
-            <Nav className="ml-auto">
-              <NavDropdown
-                title={
-                  <Image
-                    src="http://fpoimg.com/300x300"
-                    roundedCircle
-                  />
-                }
-                className="App-header__profile align-self-center"
-              >
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href={ HOME } className="align-self-center">Home</Nav.Link>
-              <Nav.Link href={ LOGIN } className="align-self-center">Link</Nav.Link>
-              <Nav.Link href={ LOGIN } className="align-self-center">Link</Nav.Link>
-            </Nav>
+            <MainMenu />
           </Navbar.Collapse>
         </Navbar>
       </header>
